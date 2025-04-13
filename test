@@ -1,0 +1,5 @@
+#!/bin/bash
+
+C_SRC="c-c99.c"
+C_EXE="c-c99"
+gcc -std=c99 $C_SRC -o $C_EXE  &&  diff $C_SRC <(./$C_EXE)
