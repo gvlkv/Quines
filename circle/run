@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+sbcl --script cl.lisp > php.php     &&
+php php.php           > perl-5.pl   &&
+perl perl-5.pl        > ruby-3.rb   &&
+ruby ruby-3.rb        > python-3.py &&
+python python-3.py    > out.lisp    &&
+cmp cl.lisp out.lisp
