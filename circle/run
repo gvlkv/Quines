@@ -1,14 +1,22 @@
 #!/usr/bin/bash
 
-sbcl --script cl.lisp       > lua.lua     &&
-lua lua.lua                 > haskell.hs  &&
-ghc haskell.hs && ./haskell > bash.bash   &&
-bash bash.bash              > java-8.java &&
-javac java-8.java && java A > c.c         &&
-gcc c.c -o c && ./c         > js.js       &&
-node js.js                  > php.php     &&
-php php.php                 > perl-5.pl   &&
-perl perl-5.pl              > ruby-3.rb   &&
-ruby ruby-3.rb              > python-3.py &&
-python python-3.py          > out.lisp    &&
+sbcl --script cl.lisp       > csharp.cs     &&
+rm -f circle.csproj &&
+dotnet new console &&
+rm -f Program.cs &&
+dotnet run                  > pascal.pas    &&
+fpc pascal.pas && ./pascal  > scala-3.scala &&
+scala scala-3.scala         > julia.julia   &&
+julia julia.julia           > fish.fish     &&
+fish fish.fish              > lua.lua       &&
+lua lua.lua                 > haskell.hs    &&
+ghc haskell.hs && ./haskell > bash.bash     &&
+bash bash.bash              > java-8.java   &&
+javac java-8.java && java A > c.c           &&
+gcc c.c -o c && ./c         > js.js         &&
+node js.js                  > php.php       &&
+php php.php                 > perl-5.pl     &&
+perl perl-5.pl              > ruby-3.rb     &&
+ruby ruby-3.rb              > python-3.py   &&
+python python-3.py          > out.lisp      &&
 cmp cl.lisp out.lisp

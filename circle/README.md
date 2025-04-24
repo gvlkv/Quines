@@ -1,6 +1,6 @@
 # Uroboros quine program
 
-11 languages
+16 languages
 
 ## Run
 ```
