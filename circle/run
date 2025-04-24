@@ -1,6 +1,8 @@
 #!/usr/bin/bash
 
-sbcl --script cl.lisp > php.php     &&
+sbcl --script cl.lisp > c.c         &&
+gcc c.c -o c && ./c   > js.js       &&
+node js.js            > php.php     &&
 php php.php           > perl-5.pl   &&
 perl perl-5.pl        > ruby-3.rb   &&
 ruby ruby-3.rb        > python-3.py &&
