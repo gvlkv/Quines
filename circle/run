@@ -1,10 +1,14 @@
 #!/usr/bin/bash
 
-sbcl --script cl.lisp > c.c         &&
-gcc c.c -o c && ./c   > js.js       &&
-node js.js            > php.php     &&
-php php.php           > perl-5.pl   &&
-perl perl-5.pl        > ruby-3.rb   &&
-ruby ruby-3.rb        > python-3.py &&
-python python-3.py    > out.lisp    &&
+sbcl --script cl.lisp       > lua.lua     &&
+lua lua.lua                 > haskell.hs  &&
+ghc haskell.hs && ./haskell > bash.bash   &&
+bash bash.bash              > java-8.java &&
+javac java-8.java && java A > c.c         &&
+gcc c.c -o c && ./c         > js.js       &&
+node js.js                  > php.php     &&
+php php.php                 > perl-5.pl   &&
+perl perl-5.pl              > ruby-3.rb   &&
+ruby ruby-3.rb              > python-3.py &&
+python python-3.py          > out.lisp    &&
 cmp cl.lisp out.lisp
